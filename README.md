@@ -20,4 +20,8 @@ All classes, tasks and practice
   4. Array and Loops tasks  
   5. Syntax error  
   6. Modules  
+## Class 5:  
+  1. Inquirer  
+  2. Chalk  
+  3. Banner  
      
