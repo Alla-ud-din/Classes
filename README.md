@@ -9,6 +9,15 @@ All classes, tasks and practice
   3. Comparison operators  
 ## Class 3:  
   1. How to get input from user through prompt.  
-  2. Function  
-  3. If-else  
+  2. Function   
+  3. If-else   
   4. Array  
+## Class 4:  
+  1. Loops  
+     i. For loop  
+     ii. While loop  
+  3. Nested Loops  
+  4. Array and Loops tasks  
+  5. Syntax error  
+  6. Modules  
+     
