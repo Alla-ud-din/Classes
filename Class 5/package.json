@@ -16,5 +16,9 @@
     "i": "^0.3.7",
     "inquirer": "^9.2.11",
     "npm": "^10.1.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "node-banner": "^1.4.0"
   }
 }
