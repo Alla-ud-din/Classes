@@ -1,8 +1,11 @@
 "use strict";
-//Bio data
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.myName = exports.city = void 0;
-let myName = "Zia";
-exports.myName = myName;
-let city = "ISB";
-exports.city = city;
+// //Bio data
+// let myName= "Zia";
+// let city= "ISB";
+// // export  {myName};
+// export {city, myName};
+// let a = 5;
+// export default a;
+// const b = 10;
+// const c = 2;
+// export {b, c};

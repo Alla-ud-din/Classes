@@ -222,3 +222,10 @@ let arr1=[1, 3, -4, 7, 8, -9, 11, 12, -14, 13, 16, 15, 17, -18, 20]
 // console.log(myName);
 // console.log(myName);
 // console.log(ksjdksda);
+// import x from "./firstModule"
+// import {b, c} from "./firstModule"
+// console.log(x);
+// console.log(b);
+// console.log(c);
+
+
