@@ -104,6 +104,7 @@ let yourName = Math.random() > 0.6 ? "Hira Khan": undefined;
 // // 2. If yourName is not a string (e.g., if it's a number, null, or undefined), 
 // // the expression will not throw an error. 
 // // Instead, it will return undefined without attempting to call the toUpperCase() method.
+
 // yourName?.toUpperCase();//OK
 
 // // You can also define a type alias
