@@ -38,79 +38,75 @@
 //     console.log("this is a callback function.. ",text);
 // })
 
-function carMaintenance(){
-    console.log("I leave my car at 9 in workshop");
+// function carMaintenance(){
+//     console.log("I leave my car at 9 in workshop");
+// setTimeout(() => {
+//     console.log("Car is fixed...");
+//     console.log("mechanicResponse...: Your car is ready");
+// }, 2000);
+// }
+// function pickDress(){
+//     setTimeout(() => {
+//         console.log("laundryResponse ...Your Dress is ready");
+//     }, 100);
+// }
+// carMaintenance();
 
-setTimeout(() => {
-    console.log("Car is fixed...");
-    return "Your car is ready"
-}, 2000);
-}
+// setTimeout(() => {
+//     console.log("Do grocery");
+//     }, 0);
+// let laundryResponse = pickDress();
 
-function pickDress(){
-    setTimeout(() => {
-        return "Your Dress is ready"
-    }, 100);
-}
-
-let mechanicResponse = carMaintenance();
-console.log("mechanicResponse... ", mechanicResponse);
-setTimeout(() => {
-    console.log("Do grocery");
-    }, 0);
-let laundryResponse = pickDress();
-console.log("laundryResponse ...", laundryResponse);
-setTimeout(() => {
-    console.log("Attend Event");
-    }, 2000);
-
+// setTimeout(() => {
+//     console.log("Attend Event");
+//     }, 2000);
 
 // // =============================================
-// // Callbacks implementations
+// Callbacks implementations
 
-// function carMaintenance(cb: (text: string) => void) {
-//     console.log("I leave my car at 9 in workshop");
+function carMaintenance(cb: (text: string) => void) {
+    console.log("I leave my car at 9 in workshop");
   
-//     setTimeout(() => {
-//       console.log("Car is fixed...");
-//       cb("Your car is ready");
-//     }, 2000);
-//   }
-//   // function carMaintCallBack(text:string){
-//   //     console.log("Car Maint Call back...",text);
-//   //     pickDress(dressCallBack);
-//   // }
+    setTimeout(() => {
+      console.log("Car is fixed...");
+      cb("Your car is ready");
+    }, 2000);
+  }
+  function carMaintCallBack(text:string){
+      console.log("Car Maint Call back...",text);
+      pickDress(dressCallBack);
+  }
   
-//   function pickDress(callback: (text: string) => void) {
-//     setTimeout(() => {
-//       console.log("Your Dress is ready");
-//       callback("pick your dress");
-//     }, 100);
-//   }
+  function pickDress(callback: (text: string) => void) {
+    setTimeout(() => {
+      console.log("Your Dress is ready");
+      callback("pick your dress");
+    }, 100);
+  }
   
-//   // function dressCallBack(text:string){
-//   //     console.log("this is dress callback..",text);
-//   //     attendEvent();
-//   // }
+  function dressCallBack(text:string){
+      console.log("this is dress callback..",text);
+      attendEvent(eventCallBack);
+  }
   
-//   function attendEvent(cb: (text: string) => void) {
-//     console.log("Now you can attend the event");
-//     cb("Now you can go home");
-//   }
-//   // function eventCallBack(text:string){
-//   //     console.log(text);
-//   //     BacktoHome();
-//   // }
+  function attendEvent(cb: (text: string) => void) {
+    console.log("Now you can attend the event");
+    cb("Now you can go home");
+  }
+  function eventCallBack(text:string){
+      console.log(text);
+      BacktoHome();
+  }
   
-//   function BacktoHome() {
-//     console.log("reached home");
-//   }
-//   // ===========================
-//   // functin calling
-//   // carMaintenance(carMaintCallBack);
-//   // setTimeout(() => {
-//   //     console.log("Do grocery");
-//   //     }, 0);
+  function BacktoHome() {
+    console.log("reached home");
+  }
+  // ===========================
+  //   functin calling
+  carMaintenance(carMaintCallBack);
+  setTimeout(() => {
+      console.log("Do grocery");
+      }, 0);
   
 //   // ===============================
   
