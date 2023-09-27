@@ -23,5 +23,10 @@ All classes, tasks and practice
 ## Class 5:  
   1. Inquirer  
   2. Chalk  
-  3. Banner  
+  3. Banner
+## Class 6:  
+  1. Union Types  
+  2. Ternary/conditional operator  
+  3. Type Alias
+  4. Objects
      
