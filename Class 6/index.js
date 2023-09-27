@@ -72,6 +72,7 @@ let yourName = Math.random() > 0.6 ? "Hira Khan" : undefined;
 // // the expression will not throw an error. 
 // // Instead, it will return undefined without attempting to call the toUpperCase() method.
 // yourName?.toUpperCase();//OK
+// // <===========================Type Alias===================================>
 // // You can also define a type alias
 // type RawData = boolean | number | string | null | undefined;
 // let data: RawData;
@@ -80,21 +81,22 @@ let yourName = Math.random() > 0.6 ? "Hira Khan" : undefined;
 // type IdMaybe = Id | undefined | null;
 // // ===============================
 // let amt = "Ten Thounsand";
-// amt.toLowerCase();
-// function cashWithdraw(amount: number | string | boolean){
+// console.log(amt.toLowerCase());
+// function cashWithdraw(amount: number | string | boolean){  
 //     //common type
 //     amount.toString();
 //      //amount = "Thirty K"
 //     //string
 //     if(typeof amount == 'string'){
-//          amount.toLowerCase();
+//     console.log(amount.toLowerCase());
 //     }
 //     else if(typeof amount == 'number'){
-//     amount / 100;
+//     console.log(amount / 100);
 //     }
 //     //amount = 5000
 //     //number
 // }
+// cashWithdraw(5);
 // let age2: number | "died" | "unknown";
 // age2 = 17;
 // age2 ="ten"
@@ -116,7 +118,7 @@ let yourName = Math.random() > 0.6 ? "Hira Khan" : undefined;
 //     "Fuel avg": '15km'
 // }
 // console.log(carObj.color);
-// // console.log(carObj.brand);
+// console.log(carObj.brand);
 // console.log(carObj['brand']);
 // console.log(carObj['Fuel avg']);
 // // =========================
@@ -128,10 +130,10 @@ let yourName = Math.random() > 0.6 ? "Hira Khan" : undefined;
 // // ==========================
 // // Nested Objects
 // let addressVal = {
-//     HNo:"4/2",
-//     StNo:"12",
-//     City:"ISB",
-//     PostCode:46000
+//     HNo:"3/7",
+//     StNo:"74",
+//     City:"KHI",
+//     PostCode:52000
 // }
 // let person ={
 //     firstName:"Zia",
