@@ -91,18 +91,18 @@
 // setTimeout(() => {
 //   console.log("Do grocery");
 // }, 0);
-//   // ===============================
-//   // CallBackHell
-//   // carMaintenance(function (text:string){
-//   //     console.log("Car Maint Call back...",text);
-//   //     pickDress(function (text:string){
-//   //         console.log("this is dress callback..",text);
-//   //         attendEvent(function (text:string){
-//   //             console.log(text);
-//   //             BacktoHome();
-//   //         });
-//   //     });
-//   // })
+// ===============================
+// CallBackHell
+// carMaintenance(function (text:string){
+//     console.log("Car Maint Call back...",text);
+//     pickDress(function (text:string){
+//         console.log("this is dress callback..",text);
+//         attendEvent(function (text:string){
+//             console.log(text);
+//             BacktoHome();
+//         });
+//     });
+// })
 //   // ====================================
 //   // Promises
 //   function carMaintenance1() {

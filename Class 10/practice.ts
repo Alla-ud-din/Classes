@@ -34,3 +34,65 @@
 // main([1,2,3,9], callback);
 // console.log(sum);
 
+// Make egg, tea and juice and then serve
+// function makeEgg(cb: ()=>void){
+//     console.log("Making Egg");
+//     setTimeout(() => {
+//         cb()
+//     }, 1000); 
+// }
+// function makeTea(cb: ()=>void){
+//     console.log("Making Tea");
+//     setTimeout(() => {  
+//         cb();
+//     }, 2000);  
+// }
+// function makeJuice(cb: ()=>void){
+//     console.log("Making Juice");
+//     setTimeout(() => {
+//         cb();
+//     }, 3000);   
+// }
+// function eggCallBack(){
+//     console.log("Egg is ready");
+//     makeTea(teaCallBack)
+// }
+// function teaCallBack(){
+//     console.log("Tea is ready");
+//     makeJuice(juiceCallBack);
+// }
+// function juiceCallBack(){
+//     console.log("Juice is ready")
+//     serve();
+// }
+// function serve(){
+//     console.log("Breakfast is served")
+// }
+// makeEgg(eggCallBack);
+
+// In above example, one task happening at one time.
+// As it is possible to make Egg, make Tea and Juice in parallel.
+// example of Async 
+function makeEgg(){ 
+    setTimeout(() => {
+        console.log("Egg is ready");
+    }, 1000); 
+}
+function makeTea(){ 
+    setTimeout(() => {  
+        console.log("Tea is ready");
+    }, 2000);  
+}
+function makeJuice(){ 
+    setTimeout(() => {
+        console.log("Juice is ready");
+        serve();
+    }, 3000);   
+}
+function serve(){
+    console.log("Breakfast is served")
+}
+makeEgg();
+makeTea();
+makeJuice();
+
