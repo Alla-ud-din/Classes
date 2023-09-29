@@ -231,24 +231,24 @@
 // // })
 // <==================
 // Promise.all
-function makeEgg() {
-    console.log("Making Egg");
-    setTimeout(() => {
-    }, 1000);
-}
-function makeTea() {
-    console.log("Making Tea");
-    setTimeout(() => {
-    }, 2000);
-}
-function makeJuice() {
-    console.log("Making Juice");
-    setTimeout(() => {
-    }, 3000);
-}
-function serve() {
-    console.log("Breakfast is served");
-}
-Promise.all([makeTea(), makeEgg(), makeJuice()]).then(() => {
-    serve();
-});
+// function makeEgg(){
+//     console.log("Making Egg");
+//     setTimeout(() => {
+//     }, 1000); 
+// }
+// function makeTea(){
+//     console.log("Making Tea");
+//     setTimeout(() => {  
+//     }, 2000);  
+// }
+// function makeJuice(){
+//     console.log("Making Juice");
+//     setTimeout(() => {
+//     }, 3000);   
+// }
+// function serve(){
+//     console.log("Breakfast is served")
+// }
+// Promise.all([makeTea(), makeEgg(), makeJuice()]).then(()=>{
+//     serve()
+// })

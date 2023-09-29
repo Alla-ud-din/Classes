@@ -105,25 +105,25 @@
 // })
 //   // ====================================
 //   // Promises
-function carMaintenance1() {
-    console.log("I leave my car at 9 in workshop");
-    let result = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Car is fixed...");
-            resolve("Your car is ready");
-        }, 2000);
-    });
-    return result;
-}
-function pickDress1() {
-    let promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Your Dress is ready");
-            resolve("pick your dress");
-        }, 100);
-    });
-    return promise;
-}
+// function carMaintenance1() {
+//   console.log("I leave my car at 9 in workshop");
+//   let result: Promise<string> = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Car is fixed...");
+//       resolve("Your car is ready");
+//     }, 2000);
+//   });
+//   return result;
+// }
+// function pickDress1() {
+//   let promise: Promise<string> = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Your Dress is ready");
+//       resolve("pick your dress");
+//     }, 100);
+//   });
+//   return promise;
+// }
 // let mechanicResponse = carMaintenance1();
 // mechanicResponse.
 // then((text:string)=>{
@@ -143,7 +143,7 @@ function pickDress1() {
 // function dressCallBack(text:string){
 //     console.log("this is dress callback..",text);
 //     attendEvent();
-// }
+// } 
 // function attendEvent1(cb: (text:string)=>void){
 //     console.log("Now you can attend the event");
 //     cb("Now you can go home")
@@ -156,35 +156,35 @@ function pickDress1() {
 //     console.log("reached home");
 // }
 //   // =========================
-//   function someTask(num: number) {
-//     let promiseObj: Promise<string> = new Promise((resolve, reject) => {
-//       if (num > 3) {
-//         resolve("Promises are resolved here...");
-//       } else {
-//         reject("Promises are rejected here...");
-//       }
-//     });
-//     return promiseObj;
-//   }
-//   function task2() {
-//     let promiseObj: Promise<string> = new Promise((resolve, reject) => {
-//       reject("task2 Promises are resolved here...");
-//     });
-//     return promiseObj;
-//   }
-//   let response = someTask(6);
-//   response
-//     .then((text: string) => {
-//       console.log("then of values..", text);
-//       return task2();
-//     })
-//     .then((text: string) => {
-//       console.log("then of task2..", text);
-//     })
-//     .catch((err) => {
-//       console.log("This is catch..", err);
-//     });
-//   // console.log("Response...", response);
+// function someTask(num: number) {
+//   let promiseObj: Promise<string> = new Promise((resolve, reject) => {
+//     if (num > 3) {
+//       resolve("Promises are resolved here...");
+//     } else {
+//       reject("Promises are rejected here...");
+//     }
+//   });
+//   return promiseObj;
+// }
+// function task2() {
+//   let promiseObj: Promise<string> = new Promise((resolve, reject) => {
+//     reject("task2 Promises are resolved here...");
+//   });
+//   return promiseObj;
+// }
+// let response = someTask(6);
+// response
+//   .then((text: string) => {
+//     console.log("then of values..", text);
+//     return task2();
+//   })
+//   .then((text: string) => {
+//     console.log("then of task2..", text);
+//   })
+//   .catch((err) => {
+//     console.log("This is catch..", err);
+//   });
+// console.log("Response...", response);
 //   // ================================================
 //   // Async await
 //   function delay(milliseconds: number): Promise<void> {
