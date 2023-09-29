@@ -20,6 +20,9 @@
 // }
 // sum(callback, 5,6);
 
+import { rejects } from "assert";
+import { resolve } from "path";
+
 // Implement a function that iterates over an array of numbers and applies a callback to each element. 
 // For example, you can create a function that squares each number in an array using a callback.
 // function main(arr: number[], cb:(num: number)=>void){
@@ -257,3 +260,31 @@
 // Promise.all([makeTea(), makeEgg(), makeJuice()]).then(()=>{
 //     serve()
 // })
+function delay (ms: number){
+    return new Promise ((resolve, reject)=>{
+        setTimeout(() => {
+            const res = true;
+            if (res){
+                resolve("Promise resolve")
+            }else{
+                reject("Promise is rejected")
+            }
+        }, ms);
+    })
+}
+async function firstFunction() {
+    const response = await delay(3000);
+    console.log("Function 1, ", response);
+    const response1 = await delay(5000);
+    console.log("Function 1, ", response1);
+    console.log("This is sync");
+}
+async function secondFunction() {
+    const response = await delay(3000);
+    console.log("Function 2, ", response);
+    const response1 = await delay(5000);
+    console.log("Function 2, ",  response1);
+    console.log("This is sync");
+}
+await firstFunction();
+secondFunction()

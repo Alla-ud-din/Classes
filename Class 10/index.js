@@ -8,6 +8,7 @@
 // }, 2000);
 // console.log("Task 5");
 // // ====================================
+export {};
 // // Weekend
 // // 1- car maintenance
 // // 2- do some Grocery
@@ -186,13 +187,13 @@
 // console.log("Response...", response);
 //   // ================================================
 //   // Async await
-function delay(milliseconds) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve();
-        }, milliseconds);
-    });
-}
+// function delay(milliseconds: number): Promise<void> {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve();
+//     }, milliseconds);
+//   });
+// }
 //Using `then`, `catch`, and `finally`:
 // delay(1000)
 //   .then(() => {
@@ -205,14 +206,11 @@ function delay(milliseconds) {
 //     console.log("This is always executed");
 //   });
 //   //Using `async/await`:
-try {
-    await delay(1000);
-    console.log("Await: The delay is over");
-}
-catch (error) {
-    console.error("Await: Something went wrong:", error);
-}
-finally {
-    console.log("Await: This is always executed");
-}
-export {};
+// try {
+//   await delay(1000);
+//   console.log("Await: The delay is over");
+// } catch (error) {
+//   console.error("Await: Something went wrong:", error);
+// } finally {
+//   console.log("Await: This is always executed");
+// }
