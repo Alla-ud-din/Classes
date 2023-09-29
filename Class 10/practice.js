@@ -95,27 +95,27 @@
 // makeJuice();
 // <============
 // Callback Hell
-function makeEgg(cb) {
-    console.log("Making Egg");
-    setTimeout(() => {
-        cb();
-    }, 1000);
-}
-function makeTea(cb) {
-    console.log("Making Tea");
-    setTimeout(() => {
-        cb();
-    }, 2000);
-}
-function makeJuice(cb) {
-    console.log("Making Juice");
-    setTimeout(() => {
-        cb();
-    }, 3000);
-}
-function serve() {
-    console.log("Breakfast is served");
-}
+// function makeEgg(cb: ()=>void){
+//     console.log("Making Egg");
+//     setTimeout(() => {
+//         cb()
+//     }, 1000); 
+// }
+// function makeTea(cb: ()=>void){
+//     console.log("Making Tea");
+//     setTimeout(() => {  
+//         cb();
+//     }, 2000);  
+// }
+// function makeJuice(cb: ()=>void){
+//     console.log("Making Juice");
+//     setTimeout(() => {
+//         cb();
+//     }, 3000);   
+// }
+// function serve(){
+//         console.log("Breakfast is served")
+//     }
 // makeEgg(()=>{
 //     console.log("Egg is ready");
 //     makeTea(()=>{
@@ -127,13 +127,128 @@ function serve() {
 //     })
 // })
 // doing task in parallel
-makeEgg(() => {
-    console.log("Egg is ready");
-    makeJuice(() => {
-        console.log("Juice is ready");
-        serve();
-    });
-});
-makeTea(() => {
-    console.log("Tea is ready");
+// makeEgg(()=>{
+//     console.log("Egg is ready");
+//         makeJuice(()=>{
+//             console.log("Juice is ready");
+//             serve();
+//         })
+//     })
+// makeTea(()=>{
+//     console.log("Tea is ready");
+// })
+// <===========================
+// Promises
+// let myPromise = new Promise(function(resolve, reject){
+//     const isMeet = false;
+//     if (isMeet){
+//         resolve("Dinner");
+//     }else{
+//         reject("Will meet some other day");
+//     }
+// });
+// // Syntax: .then(onResolve, onRejection)
+// myPromise.then((data)=>{
+//     console.log(data);
+// }).catch((error)=>{
+//     console.log(error)
+// })
+// function myPromise(){
+//     return new Promise((resolve, reject)=>{
+//         const isMeet= true;
+//         if (isMeet){
+//             resolve("Dinner");  // if we commet resolve then no connection will established 
+//             // b/w resolve and .then(). 
+//             // Thus there will be no output
+//         }else{
+//             reject("Will meet some other day");
+//         }
+//     })
+// }
+// myPromise().then((data)=>{
+//     console.log(data);
+//     console.log("Hello")
+// })
+// <=============
+// Promise chaining
+//  Make omlette
+// function makeOmlete(){
+//     return new Promise(function(res, rej){
+//         setTimeout(() => {
+//             res("preparing omlete")
+//         }, 0);
+//     });
+// }
+// makeOmlete().then((response)=>{
+//     console.log(response);
+// })
+// .then (()=>{
+//     return new Promise ((res, rej)=>{
+//         const isOnion = true;
+//         if (isOnion){
+//             setTimeout(() => {
+//                 res("Onion is chopped");
+//             }, 2000);
+//         }else{
+//             const error = new Error("Onion out of stock");
+//             rej(error);
+//         }
+//     })
+// })
+// .then((response)=>{
+//     console.log(response);
+// })                                              // 1.
+// .then (()=>{                                    // 2. We can skip these two lines
+//     return new Promise ((res, rej)=>{
+//         const isTomato = true;
+//         if (isTomato){
+//             setTimeout(() => {
+//                 res("Tomato is cut");
+//             }, 2000);
+//         }else{
+//             const error = new Error("Tomato out of stock");
+//             rej(error);
+//         }
+//     })
+// })
+// .then ((data)=>{  
+//     console.log(data)                                  //we skip those 2 lines
+//     return new Promise ((res, rej)=>{
+//         setTimeout(() => {
+//             res("Omlete is ready");
+//         }, 4000);
+//     })
+// })
+// .then((data)=>{
+//     console.log(data);
+//     return data;
+// })
+// .catch((error)=>{
+//     console.log(error.message)
+// })
+// // .finally(()=>{
+// //     console.log("Program is ended");
+// // })
+// <==================
+// Promise.all
+function makeEgg() {
+    console.log("Making Egg");
+    setTimeout(() => {
+    }, 1000);
+}
+function makeTea() {
+    console.log("Making Tea");
+    setTimeout(() => {
+    }, 2000);
+}
+function makeJuice() {
+    console.log("Making Juice");
+    setTimeout(() => {
+    }, 3000);
+}
+function serve() {
+    console.log("Breakfast is served");
+}
+Promise.all([makeTea(), makeEgg(), makeJuice()]).then(() => {
+    serve();
 });
