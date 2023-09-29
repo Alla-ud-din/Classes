@@ -73,26 +73,71 @@
 // In above example, one task happening at one time.
 // As it is possible to make Egg, make Tea and Juice in parallel.
 // example of Async 
-function makeEgg(){ 
+// function makeEgg(){ 
+//     setTimeout(() => {
+//         console.log("Egg is ready");
+//     }, 1000); 
+// }
+// function makeTea(){ 
+//     setTimeout(() => {  
+//         console.log("Tea is ready");
+//     }, 2000);  
+// }
+// function makeJuice(){ 
+//     setTimeout(() => {
+//         console.log("Juice is ready");
+//         serve();
+//     }, 3000);   
+// }
+// function serve(){
+//     console.log("Breakfast is served")
+// }
+// makeEgg();
+// makeTea();
+// makeJuice();
+// <============
+// Callback Hell
+function makeEgg(cb: ()=>void){
+    console.log("Making Egg");
     setTimeout(() => {
-        console.log("Egg is ready");
+        cb()
     }, 1000); 
 }
-function makeTea(){ 
+function makeTea(cb: ()=>void){
+    console.log("Making Tea");
     setTimeout(() => {  
-        console.log("Tea is ready");
+        cb();
     }, 2000);  
 }
-function makeJuice(){ 
+function makeJuice(cb: ()=>void){
+    console.log("Making Juice");
     setTimeout(() => {
-        console.log("Juice is ready");
-        serve();
+        cb();
     }, 3000);   
 }
 function serve(){
-    console.log("Breakfast is served")
-}
-makeEgg();
-makeTea();
-makeJuice();
+        console.log("Breakfast is served")
+    }
+// makeEgg(()=>{
+//     console.log("Egg is ready");
+//     makeTea(()=>{
+//         console.log("Tea is ready");
+//         makeJuice(()=>{
+//             console.log("Juice is ready");
+//             serve();
+//         })
+//     })
+// })
 
+// doing task in parallel
+makeEgg(()=>{
+    console.log("Egg is ready");
+    
+        makeJuice(()=>{
+            console.log("Juice is ready");
+            serve();
+        })
+    })
+makeTea(()=>{
+    console.log("Tea is ready");
+})
