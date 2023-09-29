@@ -1,8 +1,8 @@
-"use strict";
 // //What are callback function in JAVASCRIPT:
 // setTimeout(function(){
 //     console.log("Timer");
 // }, 3000);
+export {};
 // function x(y){
 //     console.log("This is X function");
 //     y();

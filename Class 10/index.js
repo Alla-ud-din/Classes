@@ -1,4 +1,3 @@
-"use strict";
 // console.log("Task 1");
 // setTimeout(() => {
 //     console.log("Task 2");
@@ -187,30 +186,33 @@
 // console.log("Response...", response);
 //   // ================================================
 //   // Async await
-//   function delay(milliseconds: number): Promise<void> {
-//     return new Promise((resolve) => {
-//       setTimeout(() => {
-//         resolve();
-//       }, milliseconds);
-//     });
-//   }
-//   //Using `then`, `catch`, and `finally`:
-//   delay(1000)
-//     .then(() => {
-//       console.log("The delay is over");
-//     })
-//     .catch((error) => {
-//       console.error("Something went wrong:", error);
-//     })
-//     .finally(() => {
-//       console.log("This is always executed");
-//     });
+function delay(milliseconds) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, milliseconds);
+    });
+}
+//Using `then`, `catch`, and `finally`:
+// delay(1000)
+//   .then(() => {
+//     console.log("The delay is over");
+//   })
+//   .catch((error) => {
+//     console.error("Something went wrong:", error);
+//   })
+//   .finally(() => {
+//     console.log("This is always executed");
+//   });
 //   //Using `async/await`:
-//   try {
-//     await delay(1000);
-//     console.log("Await: The delay is over");
-//   } catch (error) {
-//     console.error("Await: Something went wrong:", error);
-//   } finally {
-//     console.log("Await: This is always executed");
-//   }
+try {
+    await delay(1000);
+    console.log("Await: The delay is over");
+}
+catch (error) {
+    console.error("Await: Something went wrong:", error);
+}
+finally {
+    console.log("Await: This is always executed");
+}
+export {};
