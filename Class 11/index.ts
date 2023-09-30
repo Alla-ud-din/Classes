@@ -127,7 +127,6 @@
 //     console.log(this.name + " moved " + meters + "m.");
 //   }
 // }
-
 // class Snake extends Animal {
 //   constructor(name: string) {
 //     super(name);
@@ -150,10 +149,8 @@
 //     super.move(meters);
 //   }
 // }
-
 // class Donkey extends Animal {
 //   distance: number;
-
 //   constructor(name: string, distance: number) {
 //     super(name);
 //     this.distance = distance;
@@ -163,7 +160,6 @@
 //     super.move(meters);
 //   }
 // }
-
 // class Cat extends Animal {
 //   constructor(name: string) {
 //     super(name);
@@ -173,7 +169,6 @@
 //     super.move(meters);
 //   }
 // }
-
 // let a: Animal = new Snake("Python");
 // a.move(5);
 // //Snake move method is called not Animals, this is because of polymorphism
