@@ -1,15 +1,22 @@
 "use strict";
-// overloads give us type-checked calls
+// // overloads give us type-checked calls
+// // function add1(arg1: string, arg2: string){
+// // body
+// // }
+// //its customary to order overloads from most specific to least specific
+// function add(arg1: string, arg2: string): string; //option 1
+// function add(arg1: number): number; //option 2
+// function add(arg1: boolean, arg2: boolean): boolean; //option 3
 // //this is not part of the overload list,
 // //so it has only three overloads
-function add(arg1, arg2) {
-    return arg1 + arg2;
-}
+// function add(arg1: any, arg2?: any): any {
+//   return arg1 + arg2;
+// }
 // //Calling 'add' with any other parameter types would cause an error except for the three options
-// console.log(add(1, 2));
-console.log(add(1));
-console.log(add("Hello", "World"));
-console.log(add(true, false));
+// // console.log(add(1, 2));
+// console.log(add(1));
+// console.log(add("Hello", "World"));
+// console.log(add(true, false));
 // // // ============================================
 // // //number array
 // let arry: number[] = [832, 1535, 1315, 155];
@@ -21,14 +28,14 @@ console.log(add(true, false));
 // class Human {
 //   name: string;
 //   constructor(userName: string) {
-//     this.name = userName;
+//    this.name = userName;
 //   }
 // }
 // let humanObj = new Human("Usman"); //obj
 // humanObj.name;
-// // let obj ={
-// //     name:""
-// // }
+// let obj ={
+//     name:""
+// }
 // class Human1 {
 //   name: string;
 //   constructor(name: string) {
@@ -52,7 +59,7 @@ console.log(add(true, false));
 //   title: string;
 //   constructor(title: string) {
 //     this.title = title;
-//   }
+// }
 //   eat() {
 //     console.log(this.title + " is a Wild Animal and is eating");
 //   }
@@ -63,24 +70,25 @@ console.log(add(true, false));
 //     this.name = name;
 //   }
 // }
-// let h: Human1 = new Human("Tom");
+// let h: Human1 = new Human1("Tom");
 // let a: Animal1 = new Animal1("Goat");
 // let r: Robot1 = new Robot1("R2-D2");
-// // let h2 = h;
-// // h2 = a;
-// // h2.eat();
-// // let r2 = r;
-// // r = a;
-// // //  a = r;
-// // //Animal has a name, Robot also has a name
-// // // "a" is a stale object therefore extra eat() method in "a" is ok
-// // //a = r2;//Error, Robot does not have eat method
-// let hum: Human = new Animal("Dog"); //Fresh Object
-// // // But Fresh or stale both have same properties and methods
-// // // therefore compatible
-// // // let wild : Animal = new WildAnimal("Deer");//Fresh Object
-// let r0: Robot = new Animal("Donkey");
-// var isItRobot = r0 instanceof Robot;
+// console.log(h, a, r);
+// let h2 = h;
+// h2 = a;
+// h2.eat();
+// let r2 = r;
+// r = a;
+// // a = r;
+// //Animal has a name, Robot also has a name
+// // "a" is a stale object therefore extra eat() method in "a" is ok
+// //a = r2;//Error, Robot does not have eat method
+// let hum: Human1 = new Animal1("Dog"); //Fresh Object
+// // But Fresh or stale both have same properties and methods
+// // therefore compatible
+// // let wild : Animal = new WildAnimal("Deer");//Fresh Object
+// let r0: Robot1 = new Animal1("Donkey");
+// var isItRobot = r0 instanceof Robot1;
 // console.log("R0 instance of ", isItRobot);
 // // ==========================================
 // class Animal {
