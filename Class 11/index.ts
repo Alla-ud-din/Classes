@@ -41,7 +41,7 @@
 // class Human {
 //   name: string;
 //   constructor(userName: string) {
-//    this.name = userName;
+//      this.name = userName;
 //   }
 // }
 // let humanObj = new Human("Usman"); //obj
@@ -49,54 +49,54 @@
 // let obj ={
 //     name:""
 // }
-// class Human1 {
-//   name: string;
-//   constructor(name: string) {
-//     this.name = name;
-//     // this.age = age;
-//   }
-//   eat() {
-//     console.log(this.name + " is a Human and is eating");
-//   }
-// }
-// class Animal1 {
-//   name: string;
-//   constructor(name: string) {
-//     this.name = name;
-//   }
-//   eat() {
-//     console.log(this.name + " is a Animal and is eating");
-//   }
-// }
-// class WildAnimal1 {
-//   title: string;
-//   constructor(title: string) {
-//     this.title = title;
-// }
-//   eat() {
-//     console.log(this.title + " is a Wild Animal and is eating");
-//   }
-// }
-// class Robot1 {
-//   name: string;
-//   constructor(name: string) {
-//     this.name = name;
-//   }
-// }
-// let h: Human1 = new Human1("Tom");
-// let a: Animal1 = new Animal1("Goat");
-// let r: Robot1 = new Robot1("R2-D2");
-// console.log(h, a, r);
+class Human1 {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+    // this.age = age;
+  }
+  eat() {
+    console.log(this.name + " is a Human and is eating");
+  }
+}
+class Animal1 {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  eat() {
+    console.log(this.name + " is a Animal and is eating");
+  }
+}
+class WildAnimal1 {
+  title: string;
+  constructor(title: string) {
+    this.title = title;
+}
+  eat() {
+    console.log(this.title + " is a Wild Animal and is eating");
+  }
+}
+class Robot1 {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+let h: Human1 = new Human1("Tom");
+let a: Animal1 = new Animal1("Goat");
+let r: Robot1 = new Robot1("R2-D2");
+h.eat();
+a.eat();
 
 // let h2 = h;
-
 // h2 = a;
 // h2.eat();
 
 // let r2 = r;
 // r = a;
 
-// // a = r;
+// a = r;
 
 // //Animal has a name, Robot also has a name
 // // "a" is a stale object therefore extra eat() method in "a" is ok
