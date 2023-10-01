@@ -207,6 +207,8 @@ let yourName = Math.random() > 0.6 ? "Hira Khan": undefined;
 // }
 // console.log(person.address.City);
 // console.log(person['address']['StNo']);
+
+
 // type Human ={
 //     name:string,
 //     age:number,
@@ -216,3 +218,10 @@ let yourName = Math.random() > 0.6 ? "Hira Khan": undefined;
 //     person.age;
 //     person.height
 // }
+//  Can also write directly
+// function PersonInfo(person: {name: string, age: number, height: number}){
+//     person.age;
+//     person.name;
+//     person.height
+// }
+// PersonInfo({name: "Ali", height: 6, age: 20});
