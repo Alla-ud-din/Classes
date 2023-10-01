@@ -41,5 +41,5 @@ All classes, tasks and practice
 ## Class 8:  
   1. Type conversion  
   2. Enum
-  3. Const Enum
+  3. Const Enum  
      
