@@ -218,6 +218,12 @@ let yourName = Math.random() > 0.6 ? "Hira Khan": undefined;
 //     person.age;
 //     person.height
 // }
+// let man : Human= {
+//     name: "Ali",
+//     age: 6,
+//     height: 5
+// }
+// PersonInfo(man)
 //  Can also write directly
 // function PersonInfo(person: {name: string, age: number, height: number}){
 //     person.age;
