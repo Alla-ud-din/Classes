@@ -25,16 +25,21 @@ All classes, tasks and practice
   2. Chalk  
   3. Banner
 ## Class 6:  
-  1. Union Types  
-  2. Ternary/conditional operator   
-  3. Type Alias    
-  4. Objects
-  5. How to Deploy on NPM
+  1. Union Types
+  2. Narrowing
+  3. Ternary/conditional operator   
+  4. Type Alias    
+  5. Objects
+  6. How to Deploy on NPM  
 ## Class 7:  
   1. Interface  
   2. Fresh/Stale  
   3. Intersection  
   4. Any  
   5. Unknown  
-  6. Never  
+  6. Never
+## Class 8:  
+  1. Type conversion  
+  2. Enum
+  3. Const Enum  
      
