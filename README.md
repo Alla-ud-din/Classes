@@ -42,4 +42,11 @@ All classes, tasks and practice
   1. Type conversion  
   2. Enum
   3. Const Enum  
-     
+## Class 9:
+  1. Enum/Const Enum revision
+  2. Array and its different properties
+  3. Functions
+     i. Optional
+     ii. Default parameter
+     iii. Rest parameter
+  4. Async 
