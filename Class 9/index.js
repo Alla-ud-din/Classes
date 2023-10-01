@@ -39,26 +39,32 @@
 //   // Arrays functions
 //   const myArray1: Array<number> = [3, 4, 8, 6, 7, 8, 9];
 //   const myArray2: number[] = [21, 22, 23, 24, 25];
-//   console.log(typeof myArray1);
-//   //1- indexOf
-//   console.log(myArray1.indexOf(6));
-//   let index = myArray1.indexOf(6);
-//   console.log(index);
-//   //2- lastIndexOf()
-//   console.log(myArray1.lastIndexOf(8));
-//   //3- array1.concat(array2)
-//   let myArray3 = myArray1.concat(myArray2);
-//   console.log(myArray3);
-//   console.log(myArray1.concat([123, 105]));
-//   let myarray = Array.from(myArray2);
-//   console.log(myarray);
-//   let myArray = [...myArray1];
-//   console.log(myArray);
+//   console.log(myArray1)
+// //   console.log(typeof myArray1);
+// //   //1- indexOf
+// //   console.log(myArray1.indexOf(6));
+// //   let index = myArray1.indexOf(6);
+// //   console.log(index);
+// //   //2- lastIndexOf()
+// //   console.log(myArray1.lastIndexOf(8)); //if value is not present it will return -1;
+// //   //3- array1.concat(array2)
+// //   let myArray3 = myArray1.concat(myArray2);
+// //   console.log(myArray3);
+// //   console.log(myArray1.concat([123, 105]));
+// //   The Array.from() method iterates over the elements of myArray2 
+// //   and creates a new array (myarray) containing those elements.
+// //   let myarray = Array.from(myArray2);
+// //   console.log(myarray);
+// // // const myArray2 = "Hello";
+// // // const myarray = Array.from(myArray2);
+// // // console.log(myarray); // ['H', 'e', 'l', 'l', 'o']
+// //   let myArray = [...myArray1];   //spread operator clone or swallow myArray1 to myArray
+// //   console.log(myArray);
 //   //4- Join with operator
 //   console.log(myArray1.join("-"));
 //   console.log(typeof myArray1.join());
 //   console.log(myArray1.join());
-//   //5- push() -- returns length of Array
+//5- push() -- returns length of Array
 //   let outPut = myArray1.push(500, 600, 700); //Might looks similar with concat but remember concat returns copy of array.
 //   console.log(outPut);
 //   console.log(myArray1);
@@ -79,15 +85,19 @@
 //   console.log(myAray);
 //   console.log(myArray2);
 //   //10- slice()  Syntax: array.slice(start_index, end_index)
-//   let myAry = myArray1.slice(-5, 4);
+//   let myAry = myArray1.slice(-5, 4);   // 2nd value exclusive like 4 in this case
 //   console.log(myAry);
 //   console.log(myArray1);
-//   //11- splice () Syntax: array.splice(index, number of elements to be replaced, element1,..,elementN)
+//   //11- splice () Syntax: array.splice(index, number of elements to be replaced/delete, element1,..,elementN)
 //   //-- Returns removed elements and modifies original
 //   console.log(`myArray1 = [3, 4, 8, 6, 7, 8, 9]`);
 //   let outPutt = myArray1.splice(0, 2, 300, 400); // Replacing Items
 //   let out_put = myArray1.splice(2, 0, 5); //Added Item
 //   let outPuts = myArray1.splice(2, 1); //Removed Item
+//   console.log(outPutt);
+//   console.log(myArray1);
+//   console.log(out_put);
+//   console.log(myArray1);
 //   console.log(outPuts);
 //   console.log(myArray1);
 //   //12- toString()  --
@@ -126,7 +136,7 @@
 //   const myStrings = ["Red", "Yellow", "Blue", "Orange"];
 //   let resArry = myStrings.some((item) => item.length !== 8);
 //   console.log(resArry);
-//   //17- reduce() --
+//   //17- reduce() --  .reduce((accumulator, currentvalue)=> accumulator+ current value, initial value)
 //   let outPutArry = myArray1.reduce((total, item) => total + item, 0);
 //   console.log(outPutArry);
 //   console.log(myArray1);
@@ -142,20 +152,29 @@
 //   let rRight = myArray1.reduceRight((acc, item) => acc + item, 5);
 //   console.log(rRight);
 //   console.log(myArray1);
-//   // const myStrings = ['Red', 'Yellow', 'Blue', 'Orange']
-//   // let outPut = myStrings.reduceRight ( (acc,item) => {
-//   //     console.log("acc",acc)
-//   //     console.log("item",item)
-//   //     return acc + "," + item
-//   // })
-//   // console.log("my output",outPut)
-//   // console.log(myStrings)
+//   const myStrings = ['Red', 'Yellow', 'Blue', 'Orange']
+//   let outPut = myStrings.reduceRight ( (acc,item) => {
+//       console.log("acc",acc)
+//       console.log("item",item)
+//       return acc + "," + item
+//   })
+//   console.log("my output",outPut)
+//   console.log(myStrings)
 //   //19- sort()
+//   let outpput = myArray1.sort();
+//   console.log(outpput);
+//   console.log(myArray1);
 //   //20- fill() // fills the value with single value and mutates the original array
-//   // const myStrings = ['Red', 'Yellow', 'Blue', 'Orange']
-//   // let outPut = myStrings.fill("White",0,2)
-//   // console.log(outPut)
-//   // console.log(myStrings)
+//   let outpput = myArray1.fill(2);
+//   let out_pput = myArray1.fill(2,2);
+//   console.log(outpput);
+//   console.log(myArray1);
+//   console.log(out_pput);
+//   console.log(myArray1);
+//   const myStrings = ['Red', 'Yellow', 'Blue', 'Orange']
+//   let outPut = myStrings.fill("White",0,2)
+//   console.log(outPut)
+//   console.log(myStrings)
 //   // ================================================
 //   //Named function with optional parameters
 //   function buildName(firstName: string, lastName?: string): string {
@@ -163,8 +182,10 @@
 //     else return firstName;
 //   }
 //   let result1 = buildName("Bob"); //ok
-//   let result2 = buildName("Bob", "Adams", "Sr."); //error, too many parameters
+//   console.log(result1);
+// //   let result2 = buildName("Bob", "Adams", "Sr."); //error, too many parameters
 //   var result3 = buildName("Bob", "Adams"); //also ok
+//   console.log(result3);
 //   // ============================================================
 //   //anonymous function type with optional parameters
 //   var buildName1: (firstName: string, lastName?: string) => string = function (
@@ -174,6 +195,23 @@
 //     if (lastName) return firstName + " " + lastName;
 //     else return firstName;
 //   };
+//   let result1 = buildName1("Bob"); //ok
+//   console.log(result1);
+// //   let result2 = buildName("Bob", "Adams", "Sr."); //error, too many parameters
+//   var result3 = buildName1("Bob", "Adams"); //also ok
+//   console.log(result3);
+//   var buildName1= function (
+//     firstName: string,
+//     lastName?: string
+//   ){
+//     if (lastName) return firstName + " " + lastName;
+//     else return firstName;
+//   };
+//   let result1 = buildName1("Bob"); //ok
+//   console.log(result1);
+// //   let result2 = buildName("Bob", "Adams", "Sr."); //error, too many parameters
+//   var result3 = buildName1("Bob", "Adams"); //also ok
+//   console.log(result3);
 //   //Named function with optional and default parameters
 //   //(Note that the parameter type will be optional when used with default value)
 //   function buildNames(firstName: string, lastName = "Khan"): string {
