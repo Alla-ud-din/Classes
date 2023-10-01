@@ -37,5 +37,9 @@ All classes, tasks and practice
   3. Intersection  
   4. Any  
   5. Unknown  
-  6. Never  
+  6. Never
+## Class 8:  
+  1. Type conversion  
+  2. Enum
+  3. Const Enum
      
