@@ -28,7 +28,8 @@ All classes, tasks and practice
   1. Union Types  
   2. Ternary/conditional operator   
   3. Type Alias    
-  4. Objects  
+  4. Objects
+  5. How to Deploy on NPM
 ## Class 7:  
   1. Interface  
   2. Fresh/Stale  
