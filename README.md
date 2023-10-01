@@ -26,7 +26,14 @@ All classes, tasks and practice
   3. Banner
 ## Class 6:  
   1. Union Types  
-  2. Ternary/conditional operator  
-  3. Type Alias
-  4. Objects
+  2. Ternary/conditional operator   
+  3. Type Alias    
+  4. Objects  
+## Class 7:  
+  1. Interface  
+  2. Fresh/Stale  
+  3. Intersection  
+  4. Any  
+  5. Unknown  
+  6. Never  
      
