@@ -259,3 +259,26 @@
 //     console.log("Task4");
 //   }, 1000);
 //   console.log("Task5");
+// Important setTimeout behaviour:
+for (var i = 0; i < 10; i++) {
+    setTimeout(function () {
+        console.log(i); // output: 10 10 10 10 10 10 10 10 10 10
+    }, 1000 * i);
+}
+// To achieve the desired behavior of logging numbers from 0 to 9 with a delay, 
+// you can use a closure to capture the current value of i at each iteration:
+// for (var i = 0; i < 10; i++) {
+//   (function (i) {
+//     setTimeout(function () {
+//       console.log(i);
+//     }, 100 * i);
+//   })(i);
+// }
+// This issue basically created at once because of "var"
+// If we use "let" this issue will not be created at once
+// As let create a new scope or environment per iteration which we were created using another function.
+// for (let i = 0; i < 10; i++) {
+//   setTimeout(function () {
+//     console.log(i);   // output: 10 10 10 10 10 10 10 10 10 10
+//   }, 1000 * i);
+// }
