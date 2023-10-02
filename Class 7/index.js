@@ -1,4 +1,64 @@
 "use strict";
+// <=====================================================>
+// Difference between Interface and Type:
+// Type aliases and interfaces are very similar.
+// Almost all features of an interface are available in type.
+// a type cannot be re-opened to add new properties vs an interface which is always extendable.
+// Extending an interface: 
+// interface Animal {
+//     name: string;
+//   }
+//   interface Bear extends Animal {
+//     honey: boolean;
+//   }
+//   function getBear(bearComing: Bear){
+//     console.log(bear.name);
+//     console.log(bear.honey);
+//   }
+//   const bear = {
+//     name: "adff",
+//     honey: true
+//   };
+//   getBear(bear)
+// Extending a type via intersections
+//   type Animal = {
+//     name: string;
+//   }
+//   type Bear = Animal & { 
+//     honey: boolean;
+//   }
+//   function getBear(bearComing: Bear){
+//     console.log(bear.name);
+//     console.log(bear.honey);
+//   }
+//   const bear = {
+//     name: "adff",
+//     honey: true
+//   };
+//   getBear(bear)
+//   Adding new fields to an existing interface
+//   interface Animal {
+//     name : string;
+//   }
+//   interface Animal {
+//     speed: number;
+//   }
+//   let animalObj : Animal ={
+//     name: "Lion",
+//     speed: 23,
+//   }
+// //   A type cannot be changed after being created
+// // type Animal {
+// //     name : string;
+// //   }
+// //   type Animal {
+// //     speed: number;
+// //   }
+// //   let animalObj : Animal ={
+// //     name: "Lion",
+// //     speed: 23,
+// //   }
+// <====================================================>
 // interface cars {
 //     mileage : number,
 //     model : number
