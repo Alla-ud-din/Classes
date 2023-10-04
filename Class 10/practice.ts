@@ -285,6 +285,8 @@ import { resolve } from "path";
 //   }, (error: any)=>{
 //     console.log(error.name + " " + error.message)
 // })
+
+
 //   function watchTutorialPromise() {
 //     let userLeft = false
 //     let userWatchingCatMeme = false
@@ -304,13 +306,6 @@ import { resolve } from "path";
 //       }
 //     })
 //   }
-  
-//   watchTutorialCallback(message => {
-//     console.log(message)
-//   }, error => {
-//     console.log(error.name + ' ' + error.message)
-//   })
-  
 //   watchTutorialPromise().then(message => {
 //     console.log(message)
 //   }).catch(error => {

@@ -294,11 +294,6 @@ export {};
 //       }
 //     })
 //   }
-//   watchTutorialCallback(message => {
-//     console.log(message)
-//   }, error => {
-//     console.log(error.name + ' ' + error.message)
-//   })
 //   watchTutorialPromise().then(message => {
 //     console.log(message)
 //   }).catch(error => {
