@@ -5,9 +5,12 @@
 // console.log("Task 3");
 // setTimeout(() => {
 //     console.log("Task 4");
-// }, 2000);
+// }, 1000);
 // console.log("Task 5");
 // // ====================================
+
+import { rejects } from "assert";
+import { resolve } from "path";
 
 // // Weekend
 // // 1- car maintenance
@@ -30,6 +33,7 @@
 // function task1(anyfunction : any){
 //     console.log("do something");
 //     anyfunction("we are passing values to callback");
+//     console.log("Checking if this will print first or the console in callback function")
 // }
 
 // // task1(secondtask)
@@ -51,6 +55,7 @@
 //     }, 100);
 // }
 // carMaintenance();
+// // console.log("Check if setTimeout in carMaintenance will execute first of this console")
 
 // setTimeout(() => {
 //     console.log("Do grocery");
@@ -97,7 +102,7 @@
 //   console.log("reached home");
 // }
 //   // ===========================
-//   //   functin calling
+  //   functin calling
 // carMaintenance(carMaintCallBack);
 // setTimeout(() => {
 //   console.log("Do grocery");
@@ -120,6 +125,26 @@
 //   // ====================================
   
 //   // Promises
+
+let p = new Promise((resolve, rejects)=>{
+  let a = 1+3;
+  if (a==2){
+    resolve("Success")
+  }else{
+    rejects("Failed")
+  }
+});
+p.then((message)=>{
+  console.log("This is in the then when resolved " + message)
+}).catch((message)=>{
+  console.log("This is in the catch " + message)
+})
+//Another way of uisng .then(resolve,reject) but with .catch is common method
+// p.then((message)=>{
+//   console.log("This is in the then when resolved " + message)
+// }, (message)=>{
+//   console.log("This is in the then but rejected " + message)
+// })
   
 // function carMaintenance1() {
 //   console.log("I leave my car at 9 in workshop");
@@ -141,6 +166,7 @@
 //   return promise;
 // }
 // let mechanicResponse = carMaintenance1();
+// // console.log(mechanicResponse);
 // mechanicResponse.
 // then((text:string)=>{
 //     console.log("Mechanic Response...",text);
