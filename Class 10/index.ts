@@ -1,3 +1,5 @@
+import { rejects } from "assert";
+import { resolve } from "path";
 // console.log("Task 1");
 // setTimeout(() => {
 //     console.log("Task 2");
@@ -9,8 +11,7 @@
 // console.log("Task 5");
 // // ====================================
 
-import { rejects } from "assert";
-import { resolve } from "path";
+
 
 // // Weekend
 // // 1- car maintenance
