@@ -2,6 +2,7 @@
 // setTimeout(function(){
 //     console.log("Timer");
 // }, 3000);
+export {};
 // function x(y: any){
 //     console.log("This is X function");
 //     y();
@@ -39,16 +40,15 @@
 //   //setInterval
 //   //setInterval has the same behavior as setTimeout but the code is executed multiple times.
 //   //You have to call clearInterval to kill the timer.
-let counter = 0;
-let timer = setInterval(function () {
-    console.log("I am an asynchronous message");
-    counter += 1;
-    if (counter >= 5) {
-        clearInterval(timer);
-    }
-}, 1000);
-console.log("I am a synchronous message");
-export {};
+// let counter = 0;
+// let timer = setInterval(function () {
+//   console.log("I am an asynchronous message");
+//   counter += 1;
+//   if (counter >= 5) {
+//     clearInterval(timer);
+//   }
+// }, 1000);
+// console.log("I am a synchronous message");
 //   //With more and more asynchronous code and features in recent frameworks, we need something to manage it. Here comes our savior: the Promise class.
 //   //It is now the standard way to deal with asynchronous code
 // <==========================================>

@@ -1,3 +1,5 @@
+import { rejects } from "assert";
+import { resolve } from "path";
 // <====================== CallBack Function =============================>
 // Write a function that takes a callback as an argument and calls it after a short delay using setTimeout. 
 // Use this function to log a message after the delay.
@@ -20,8 +22,7 @@
 // }
 // sum(callback, 5,6);
 
-import { rejects } from "assert";
-import { resolve } from "path";
+
 
 // Implement a function that iterates over an array of numbers and applies a callback to each element. 
 // For example, you can create a function that squares each number in an array using a callback.
@@ -36,6 +37,14 @@ import { resolve } from "path";
 // }
 // main([1,2,3,9], callback);
 // console.log(sum);
+
+// Make a function which will take 2 values and and then call a callback function for multiplication
+// let calculation = function(x: number,y: number,callback: (x: number,y: number) => void){
+//     console.log(callback(x,y));
+// }
+// calculation(5,6,(x: number, y: number)=>{
+//     return x*y;
+// })
 
 // Make egg, tea and juice and then serve
 // function makeEgg(cb: ()=>void){
