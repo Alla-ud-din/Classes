@@ -1,4 +1,5 @@
 import { rejects } from "assert";
+import { log } from "console";
 import { resolve } from "path";
 // <====================== CallBack Function =============================>
 // Write a function that takes a callback as an argument and calls it after a short delay using setTimeout. 
@@ -154,6 +155,89 @@ import { resolve } from "path";
 // })
 // <===========================
 // Promises
+// new Promise().then().catch().finally()
+// 1. 
+// const prmoise1 = new Promise<void>((resolve, reject)=>{
+//     setTimeout(() => {
+//         console.log("Async task is complete");
+//         resolve()
+//     }, 1000);
+// });
+// console.log(prmoise1)
+// prmoise1.then(function(){
+//     console.log("Promise consumed")
+// })
+
+// 2.
+// new Promise<void>(function(res, rej){
+//     setTimeout(() => {
+//         console.log("Async task2");
+//         res();
+//     }, 1000);
+// }).then(function(){
+//     console.log("Async 2 resolved");
+
+// 3.
+// const promise3 = new Promise((resolve, reject)=>{
+//     setTimeout(() => {
+//         resolve({username: "Ali", email: "Ali@example.com"})
+//     }, 1000);
+// })
+// promise3.then((user)=>{
+//     console.log(user);
+    
+// })
+
+// 4. 
+// const promise4 = new Promise<{username: string; email: string}>(function(resolve, reject){
+//     setTimeout(() => {
+//         let error = true;
+//         if (!error)
+//         {
+//             resolve({username: "Ali", email: "Ali@example.com"})
+//         }
+//         else{
+//             reject("Error: Something went wrong")
+//         }
+//     }, 1000);
+// })
+// promise4
+// .then((user) => {
+//     console.log(user);
+//     return user.username;
+//   }).then((username)=>{
+//     console.log(username);
+//   }).catch((error)=>{
+//     console.log(error);
+//   }).finally(()=> console.log("THe promise is done"));
+
+// 5.
+// const promise5 = new Promise((resolve, reject)=>{
+//     setTimeout(() => {
+//         let error = true;
+//         if (!error){
+//             resolve({username: "Ali", email: "Ali@example.com"})
+//         }
+//         else{
+//             reject("Error: Something went wrong")
+//         }
+//     }, 1000);
+// })
+// async function comsumePromise5(){
+//     const response = await promise5;
+//     console.log(response)
+// } // this will create problem when there is an error or rejected. For that we use try catch
+// async function comsumePromise5(){
+//     try{
+//     const response = await promise5;
+//     console.log(response);
+//     } catch(error){
+//         console.log(error);
+//     }
+// } //both is true we can use try catch or .then and .catch
+// comsumePromise5();
+// })
+
 // let myPromise = new Promise(function(resolve, reject){
 //     const isMeet = false;
 //     if (isMeet){
