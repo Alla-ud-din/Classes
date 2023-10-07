@@ -310,9 +310,9 @@ export {};
 // .catch((error)=>{
 //     console.log(error.message)
 // })
-// // .finally(()=>{
-// //     console.log("Program is ended");
-// // })
+// .finally(()=>{
+//     console.log("Program is ended");
+// })
 // <==================
 // Promise.all
 // function makeEgg(){
@@ -337,7 +337,7 @@ export {};
 //     serve()
 // })
 // <===================Explaining difference between callBack and promises using same example>
-// function watchTutorialCallback(callback: any, errorCallback: any) {
+// function watchTutorialCallback(callback: (response: string)=>void, errorCallback : (error : {name: string; message: string})=>void) {
 //     let userLeft = false
 //     let userWatchingCatMeme = true
 //     if (userLeft) {
@@ -354,9 +354,9 @@ export {};
 //       callback('Thumbs up and Subscribe')
 //     }
 // }
-// watchTutorialCallback((message: any)=>{
+// watchTutorialCallback((message: string)=>{
 //     console.log("Success: " + message)
-//   }, (error: any)=>{
+//   }, (error: {name: string; message: string} )=>{
 //     console.log(error.name + " " + error.message)
 // })
 //   function watchTutorialPromise() {
@@ -433,5 +433,5 @@ export {};
 //     console.log("Function 2, ",  response1);
 //     console.log("This is sync");
 // }
-// await firstFunction();
-// secondFunction()
+// firstFunction();
+// await secondFunction();
