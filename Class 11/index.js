@@ -187,6 +187,92 @@
 // let h1: Horse = new Cat("Kitten");
 // //why is this allowed? Because it has same properties and methods (structural type) not because of inheritance
 // //https://github.com/Microsoft/TypeScript/issues/5303
+// another example
+// class school {
+//   name: string;
+//   students: student[] = [];
+//   teachers: teacher[] = [];
+//   addStudent(stdObj: student){
+//     this.students.push(stdObj);
+//   }
+//   addTeacher(tecObj: teacher){
+//     this.teachers.push(tecObj);
+//   }
+//   constructor(name: string){
+//     this.name = name;
+//   }
+// }
+// class student{
+//   name: string;
+//   age: number;
+//   schoolName: string;
+//   constructor(name: string, age: number, schoolName: string){
+//     this.name = name;
+//     this.age = age;
+//     this.schoolName = schoolName;
+//   }
+//   // studentFunc(): string{
+//   //   return `Student name is ${this.name}`
+//   // }
+// }
+// // class teacher{
+// //   [x: string]: any;
+// //   name: string;
+// //   age: number;
+// //   schoolName: string;
+// //   constructor(name: string, age: number, schoolName: string){
+// //     this.name = name;
+// //     this.age = age;
+// //     this.schoolName = schoolName;
+// //   }
+// // } instead of all this defination of class teacher we can just extend teacher using student class
+// // class teacher extends student{} // This works oky but if we want to add more details to teacher class then
+// // class teacher extends student{
+// //   email: string =""; //normally we initiallize properties using constructor
+// //   contact: number = 0;
+// //   addInfo(email: string, contact: number){
+// //     this.email = email;
+// //     this.contact = contact;
+// //   }
+// // }
+// // we can also write class teacher as 
+// class teacher extends student{
+//   email: string =""; //normally we initiallize properties using constructor
+//   contact: number = 0;
+//   constructor(name: string, age: number, schoolName: string, email: string, contact: number){
+//     super(name, age, schoolName)
+//     this.email = email;
+//     this.contact = contact;
+//   }
+// }
+// let school1 = new school("Holy Mission");
+// let school2 = new school("Mission School")
+// const student1 = new student("Ali", 10, school1.name);
+// const student2 = new student("Muazam", 8, school2.name);
+// const student3 = new student("Mukaram", 6, school2.name);
+// // const teacher1 = new teacher("Kamran", 40, school1.name);
+// // const teacher2 = new teacher("Usman", 50, school2.name);
+// // const teacher3 = new teacher("Ibrar", 50, school2.name)
+// const teacher1 = new teacher("Kamran", 40, school1.name, "abc@abc.com", 123456);
+// const teacher2 = new teacher("Usman", 50, school2.name, "def@abc.com", 789101);
+// const teacher3 = new teacher("Ibrar", 50, school2.name, "ghi@abc.com", 112131)
+// school1.addStudent(student1);
+// school2.addStudent(student2);
+// school2.addStudent(student3)
+// // console.log(school1);
+// // console.log(school2)
+// // console.log(teacher1);
+// // console.log(teacher2);
+// // console.log(teacher3);
+// school1.addTeacher(teacher1);
+// school2.addTeacher(teacher2);
+// school2.addTeacher(teacher3);
+// // teacher1.addInfo("abc@abc.com", 123456);
+// // teacher1.addInfo("def@abc.com", 789101);
+// // teacher1.addInfo("ghi@abc.com", 112131);
+// console.log(school1);
+// console.log(school2);
+// // console.log(student1.studentFunc());
 // class A {
 //   constructor() {
 //     this.MyvirtualMethod();
