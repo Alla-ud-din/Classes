@@ -289,9 +289,9 @@
 // }
 // let obj = new B();
 // // obj.testString
-// // public
-// // private
-// // protected
+// // public        by default property is public
+// // private       can use only inside class not from outside not even in child class
+// // protected     we can use property of parent class in child class but not from outside
 // var passcode = "secret passcode";
 // class Employee {
 //   private _fullName: string | undefined;
@@ -308,3 +308,23 @@
 // if (employee.fullName) {
 //   console.log(employee.fullName);
 // }
+// Example:
+class user {
+    constructor() {
+        // private name = "Bilal";
+        this.name = "Bilal";
+    }
+    getUser() {
+        return this.name;
+    }
+}
+class userInfo extends user {
+    constructor() {
+        super(...arguments);
+        this.age = 48;
+    }
+    setUserName() {
+        // return this.name = "Tehsin" // with private name property there will be an error here
+        return this.name = "Tehsin";
+    }
+}
