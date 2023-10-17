@@ -23,6 +23,22 @@
 // console.log(add("Hello", "World"));
 // console.log(add(true, false));
 
+// function sum(a: number, b: number): number;
+// function sum(a: string, b: string): string;
+// function sum(a: any, b: any){
+//   return a+b;
+// }
+// sum(4,5);   //This is giving exact data type which is number and returning number
+// // sum(5, "Ali"); //error
+// sum("Hello", "Ali") //data type as string and returning string
+
+// function sum (a: number | string, b: number | string) : number | string{
+//   if (typeof a == "number" && typeof b == "number") {return a+b;}
+//   else { return `${a} ${b}`}
+// }
+// sum(4,5);   // Not giving exact data Type
+// sum(5, "Ali"); // No error
+// sum("Hello", "Ali") //NOt giving exact data Type
 // // // ============================================
 
 // // //number array
@@ -30,8 +46,15 @@
 // let arry: number[] = [832, 1535, 1315, 155];
 
 // //Tuple types have the advantage that you can accurately describe the type of an array of mixed types
+// Tuple is a typed array, with a predefined length and types for each index.
 
 // var tuple: [number, string, boolean] = [531, "151", true];
+// var tuple: [number, string, boolean] = [531, "151"];   //error
+// var tuple: [number, string] = [531, "151", true];   //error
+// var tuple: [number, string, boolean , {name: string}] = [531, "151",true];   //error
+//to resolve above error we have to make object optional
+// var tuple: [number,string,boolean,{name: string}?] = [531,"151",true];   //No error
+// var tuple: [number,string,boolean,{name: string}?] = [531,"151",true, {name: "Ali"}];   //No error
 // var secondElement = tuple[1]; // secondElement now has type 'string'
 
 // // // =================================================
@@ -49,45 +72,45 @@
 // let obj ={
 //     name:""
 // }
-class Human1 {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-    // this.age = age;
-  }
-  eat() {
-    console.log(this.name + " is a Human and is eating");
-  }
-}
-class Animal1 {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
-  eat() {
-    console.log(this.name + " is a Animal and is eating");
-  }
-}
-class WildAnimal1 {
-  title: string;
-  constructor(title: string) {
-    this.title = title;
-}
-  eat() {
-    console.log(this.title + " is a Wild Animal and is eating");
-  }
-}
-class Robot1 {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
-}
-let h: Human1 = new Human1("Tom");
-let a: Animal1 = new Animal1("Goat");
-let r: Robot1 = new Robot1("R2-D2");
-h.eat();
-a.eat();
+// class Human1 {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//     // this.age = age;
+//   }
+//   eat() {
+//     console.log(this.name + " is a Human and is eating");
+//   }
+// }
+// class Animal1 {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+//   eat() {
+//     console.log(this.name + " is a Animal and is eating");
+//   }
+// }
+// class WildAnimal1 {
+//   title: string;
+//   constructor(title: string) {
+//     this.title = title;
+// }
+//   eat() {
+//     console.log(this.title + " is a Wild Animal and is eating");
+//   }
+// }
+// class Robot1 {
+//   name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+// }
+// let h: Human1 = new Human1("Tom");
+// let a: Animal1 = new Animal1("Goat");
+// let r: Robot1 = new Robot1("R2-D2");
+// h.eat();
+// a.eat();
 
 // let h2 = h;
 // h2 = a;
@@ -95,26 +118,25 @@ a.eat();
 
 // let r2 = r;
 // r = a;
-
-// a = r;
-
 // //Animal has a name, Robot also has a name
 // // "a" is a stale object therefore extra eat() method in "a" is ok
-
-// //a = r2;//Error, Robot does not have eat method
+// // a = r; //Error, Robot does not have eat method
+// // a = r2; //Error, Robot does not have eat method
 
 // let hum: Human1 = new Animal1("Dog"); //Fresh Object
+// console.log(hum instanceof Human1, hum instanceof Animal1)  // false true
 
 // // But Fresh or stale both have same properties and methods
 // // therefore compatible
 
-// // let wild : Animal = new WildAnimal("Deer");//Fresh Object
+// // let wild : Animal = new WildAnimal1("Deer");//Fresh Object
 
 // let r0: Robot1 = new Animal1("Donkey");
 
 // var isItRobot = r0 instanceof Robot1;
-
-// console.log("R0 instance of ", isItRobot);
+// var isItAnimal = r0 instanceof Animal1;
+// console.log("R0 instance of ", isItRobot);   // false
+// console.log("R0 instance of ", isItAnimal)   // true
 
 // // ==========================================
 
@@ -171,14 +193,18 @@ a.eat();
 // }
 // let a: Animal = new Snake("Python");
 // a.move(5);
-// //Snake move method is called not Animals, this is because of polymorphism
+//Snake move method is called not Animals, this is because of polymorphism
 
 // let a1: Animal = new Horse("Rocket");
+// console.log(a1 instanceof Animal, a1 instanceof Horse);
 // let h: Horse = a1; //explicit casting not require because Child object have same properties and fuctions
+// console.log(a1 instanceof Animal, a1 instanceof Horse);
 // // let h2: Horse = a1 as Horse; //explicit will also works but not needed
 
 // let a2: Animal = new Donkey("Worker", 100);
+// console.log(a2 instanceof Animal, a2 instanceof Donkey);
 // let h3: Donkey = a2 as Donkey; //explicit casting require because Child object have additional properties or functions
+// console.log(a2 instanceof Animal, a2 instanceof Donkey);
 // // let h4: Donkey = a2; // Error -- will not work, explicit casting is required as above
 
 // let d1: Horse = new Donkey("Worker", 200);
