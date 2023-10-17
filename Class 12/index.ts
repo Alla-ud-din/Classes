@@ -19,7 +19,7 @@
 //     abstract move(): void;     // Thus we have to add  "abstract" with class too
 //     abstract type(): void; 
 // }
-// abstract class Dog extends Animal{     //child component ky ley mast hy ky wo har abstract chz ko implement kry 
+// abstract class Dog extends Animal{//child component ky ley mast hy ky wo har abstract chz ko implement kry 
 //     sound(): void {           // overridding: Diff b/w overridding and overloading
 //         console.log("Dog will bark")   // if we don't add sound() and move() Dog will give error
 //     }
@@ -43,16 +43,15 @@
 
 // // <========================= interface ================>
 
-// interface Shape {
-//     color: string;
-//     size: number;
-// }
+interface Shape {
+    color: string;
+    size: number;
+}
 
-// interface Square extends Shape {
-//     sideLength: number;
-// }
-
-// // var square = <Square>{};
+interface Square extends Shape {
+    sideLength: number;
+}
+var square = <Square>{};
 // // square.color = "blue";
 // // square.sideLength = 10;
 // // square.a = 5;//Error
