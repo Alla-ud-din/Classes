@@ -45,8 +45,18 @@ All classes, tasks and practice
 ## Class 9:
   1. Enum/Const Enum revision
   2. Array and its different properties
-  3. Functions
-     i. Optional
-     ii. Default parameter
-     iii. Rest parameter
+  3. Functions  
+     i. Optional  
+     ii. Default parameter  
+     iii. Rest parameter  
   4. Async 
+## Class 10:  
+  1. Callback functions  
+  2. Callback Hell  
+  3. Promises  
+  4. Async await
+## Class 11
+  1. Function overload
+  2. Tuple
+  3. Class
+  4. Inheritance and extended classes
