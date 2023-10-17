@@ -43,15 +43,15 @@
 
 // // <========================= interface ================>
 
-interface Shape {
-    color: string;
-    size: number;
-}
+// interface Shape {
+//     color: string;
+//     size: number;
+// }
 
-interface Square extends Shape {
-    sideLength: number;
-}
-var square = <Square>{};
+// interface Square extends Shape {
+//     sideLength: number;
+// }
+// var square = <Square>{};
 // // square.color = "blue";
 // // square.sideLength = 10;
 // // square.a = 5;//Error
