@@ -308,23 +308,18 @@
 // if (employee.fullName) {
 //   console.log(employee.fullName);
 // }
-// Example:
-class user {
-    constructor() {
-        // private name = "Bilal";
-        this.name = "Bilal";
-    }
-    getUser() {
-        return this.name;
-    }
-}
-class userInfo extends user {
-    constructor() {
-        super(...arguments);
-        this.age = 48;
-    }
-    setUserName() {
-        // return this.name = "Tehsin" // with private name property there will be an error here
-        return this.name = "Tehsin";
-    }
-}
+// // Example:
+// class user {
+//   // private name = "Bilal";
+//   protected name = "Bilal"
+//   getUser(){
+//     return this.name;
+//   }
+// }
+// class userInfo extends user {
+//   age = 48;
+//   setUserName(){
+//     // return this.name = "Tehsin" // with private name property there will be an error here
+//     return this.name = "Tehsin";
+//   }
+// }
